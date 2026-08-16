@@ -1,0 +1,325 @@
+/* Plugin settings card chrome + staged form fields.
+ * Aligned with the official ui-settings-plugins PluginCard / fields CSS:
+ * same semantic tokens, radius, typography and states so family cards read
+ * as siblings of the built-in Shell / Agent loop / Web search cards. */
+
+.remoteMcpCard {
+  border: 1px solid var(--dsw-alias-border-l2);
+  background: var(--dsw-alias-bg-layer-3);
+  border-radius: 12px;
+  list-style: none;
+  transition: border-color 0.16s, background 0.16s;
+}
+
+.remoteMcpCard:hover {
+  border-color: var(--dsw-alias-label-dimmed);
+}
+
+.remoteMcpCardOpen {
+  background: var(--dsw-alias-bg-layer-2);
+  border-color: var(--dsw-alias-label-dimmed);
+}
+
+.remoteMcpHeader {
+  appearance: none;
+  width: 100%;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  border-radius: 12px;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  display: flex;
+}
+
+.remoteMcpHeader:focus-visible {
+  outline: 2px solid var(--dsw-alias-brand-primary);
+  outline-offset: -2px;
+}
+
+.remoteMcpHeadText {
+  flex-direction: column;
+  flex: 1;
+  gap: 4px;
+  min-width: 0;
+  display: flex;
+}
+
+.remoteMcpName {
+  color: var(--dsw-alias-label-primary);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.remoteMcpDescription {
+  color: var(--dsw-alias-label-tertiary);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.remoteMcpBody {
+  border-top: 1px solid var(--dsw-alias-border-l2);
+  margin: 0 16px;
+  padding-bottom: 8px;
+}
+
+.remoteMcpFooter {
+  border-top: 1px solid var(--dsw-alias-border-l2);
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 0 4px;
+  display: flex;
+}
+
+.remoteMcpField {
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px 0;
+  display: flex;
+}
+
+.remoteMcpField + .remoteMcpField {
+  border-top: 1px solid var(--dsw-alias-border-l2);
+}
+
+.remoteMcpInput,
+.remoteMcpSelect,
+.remoteMcpTextarea {
+  border: 1px solid var(--dsw-alias-border-l2);
+  background: var(--dsw-alias-bg-layer-3);
+  color: var(--dsw-alias-label-primary);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 13px;
+  line-height: 1.5;
+  font: inherit;
+  width: 100%;
+}
+
+.remoteMcpSelect {
+  height: 34px;
+}
+
+.remoteMcpTextarea {
+  resize: vertical;
+  min-height: 64px;
+}
+
+.remoteMcpInput:focus-visible,
+.remoteMcpSelect:focus-visible,
+.remoteMcpTextarea:focus-visible {
+  border-color: var(--dsw-alias-brand-primary);
+  outline: none;
+}
+
+.remoteMcpInput:disabled,
+.remoteMcpSelect:disabled,
+.remoteMcpTextarea:disabled {
+  color: var(--dsw-alias-label-tertiary);
+  cursor: default;
+}
+
+.remoteMcpSave {
+  appearance: none;
+  font: inherit;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 5px 14px;
+  font-size: 13px;
+  line-height: 1.5;
+  background: var(--dsw-alias-label-primary);
+  color: var(--dsw-alias-bg-layer-3);
+}
+
+.remoteMcpSave:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.remoteMcpSave:focus-visible {
+  outline: 2px solid var(--dsw-alias-brand-primary);
+  outline-offset: 1px;
+}
+
+.remoteMcpTest {
+  appearance: none;
+  font: inherit;
+  cursor: pointer;
+  border: 1px solid var(--dsw-alias-border-l2);
+  border-radius: 8px;
+  padding: 4px 12px;
+  font-size: 13px;
+  line-height: 1.5;
+  background: var(--dsw-alias-bg-layer-3);
+  color: var(--dsw-alias-label-primary);
+}
+
+.remoteMcpTest:hover:not(:disabled) {
+  border-color: var(--dsw-alias-label-dimmed);
+}
+
+.remoteMcpTest:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+
+.remoteMcpTest:focus-visible {
+  outline: 2px solid var(--dsw-alias-brand-primary);
+  outline-offset: 1px;
+}
+
+.remoteMcpDelete {
+  appearance: none;
+  font: inherit;
+  cursor: pointer;
+  border: 1px solid var(--dsw-alias-state-error-border, #fecaca);
+  border-radius: 8px;
+  padding: 4px 12px;
+  font-size: 13px;
+  line-height: 1.5;
+  background: var(--dsw-alias-bg-layer-3);
+  color: var(--dsw-alias-state-error, #dc2626);
+}
+
+.remoteMcpDelete:hover:not(:disabled) {
+  background: var(--dsw-alias-state-error-soft, #fef2f2);
+}
+
+.remoteMcpDelete:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+
+.remoteMcpDelete:focus-visible {
+  outline: 2px solid var(--dsw-alias-brand-primary);
+  outline-offset: 1px;
+}
+
+.remoteMcpSuccess {
+  color: var(--dsw-alias-state-success, #16a34a);
+  margin: 8px 0 0;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.remoteMcpError {
+  color: var(--dsw-alias-state-error, #dc2626);
+  margin: 8px 0 0;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.remoteMcpEmpty {
+  padding: 18px;
+  text-align: center;
+  color: var(--dsw-alias-label-tertiary);
+  font-size: 13px;
+  border: 1px dashed var(--dsw-alias-border-l2);
+  border-radius: 8px;
+}
+
+.remoteMcpServerItem {
+  border: 1px solid var(--dsw-alias-border-l2);
+  border-radius: 8px;
+  padding: 12px;
+  background: var(--dsw-alias-bg-layer-3);
+}
+
+.remoteMcpServerRow {
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  display: flex;
+}
+
+.remoteMcpServerTitle {
+  color: var(--dsw-alias-label-primary);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.remoteMcpServerUrl {
+  color: var(--dsw-alias-label-tertiary);
+  font-size: 12px;
+  line-height: 1.5;
+  margin-top: 2px;
+  word-break: break-all;
+}
+
+.remoteMcpActions {
+  align-items: center;
+  gap: 8px;
+  display: inline-flex;
+}
+
+.remoteMcpSectionTitle {
+  color: var(--dsw-alias-label-primary);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.remoteMcpSectionDesc {
+  color: var(--dsw-alias-label-tertiary);
+  font-size: 12px;
+  line-height: 1.5;
+  margin-top: 2px;
+}
+
+.remoteMcpTabBar {
+  border-bottom: 1px solid var(--dsw-alias-border-l2);
+  display: inline-flex;
+  gap: 0;
+  padding: 0 16px;
+}
+
+.remoteMcpTab {
+  appearance: none;
+  font: inherit;
+  cursor: pointer;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  background: transparent;
+  color: var(--dsw-alias-label-secondary);
+  padding: 10px 10px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.remoteMcpTab:hover:not(:disabled) {
+  color: var(--dsw-alias-label-primary);
+}
+
+.remoteMcpTabActive {
+  color: var(--dsw-alias-label-primary);
+  border-bottom-color: var(--dsw-alias-brand-primary);
+}
+
+.remoteMcpTab:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.remoteMcpTab:focus-visible {
+  outline: 2px solid var(--dsw-alias-brand-primary);
+  outline-offset: -2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .remoteMcpCard,
+  .remoteMcpHeader,
+  .remoteMcpTest,
+  .remoteMcpDelete,
+  .remoteMcpSave,
+  .remoteMcpTab {
+    transition: none;
+  }
+}
