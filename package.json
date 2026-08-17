@@ -1,6 +1,6 @@
 {
   "name": "dsh-remote-mcp-manager",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "DSH Web GUI 插件：在设置面板中管理远程/本地 MCP Server（HTTP / stdio），支持添加、编辑、删除、测试连接，工具自动注册到 DSH。",
   "license": "MIT",
   "keywords": [
@@ -38,5 +38,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/lwy521/dsh-remote-mcp-manager.git"
+  },
+  "dependencies": {
+    "js-yaml": "^5.3.0"
   }
 }

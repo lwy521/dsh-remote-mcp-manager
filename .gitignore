@@ -2,3 +2,5 @@ node_modules/
 cordis.patch.yml
 *.log
 .env
+.npmrc
+pnpm-lock.yaml
