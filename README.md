@@ -59,6 +59,11 @@ dsh plugin add dsh-remote-mcp-manager
 
 ## 变更记录
 
+### v0.4.1
+- **修复：npm 包内容不完整** — `files` 字段未包含 `cordis.patch.yml`、`icon.png`、`icon@2x.png`，
+  从 npm 安装后插件无法加载
+- **新增：`publishConfig`** — 固定发布到官方 registry 并声明 public
+
 ### v0.4.0
 - **新增：手机端原生面板** — 注册 `mcp-manager` 原生面板，展示各 MCP Server 的连通状态与工具数
 - **新增：国际化** — 提供 `locale/zh.json`、`locale/en.json`，标题与描述跟随系统语言

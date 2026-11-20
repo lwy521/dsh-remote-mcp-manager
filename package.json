@@ -1,6 +1,6 @@
 {
   "name": "dsh-remote-mcp-manager",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "icon": "icon.png",
   "description": "DSH 多端 MCP 管理器：手机原生面板 + Web 设置页，配置写在 cordis.patch.yml，保存后由 HMR 自动应用。",
   "license": "MIT",
@@ -27,8 +27,15 @@
   "files": [
     "lib",
     "locale",
+    "cordis.patch.yml",
+    "icon.png",
+    "icon@2x.png",
     "README.md"
   ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
   "dsh": {
     "bundle": {
       "patch": "./cordis.patch.yml"
