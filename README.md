@@ -5,7 +5,7 @@ DSH 插件：在设置面板与手机原生界面上管理远程 / 本地 MCP �
 ![下载量](https://img.shields.io/github/downloads/lwy521/dsh-remote-mcp-manager/total?logo=github)
 
 <p align="center"＞
-<a href="https://qm.qq.com/q/n8IIExyQb6">QQ 群 :1098700583</a>
+<a href="https://qm.qq.com/q/n8IIExyQb6" text＝"1098700583"></a>
 </p>
 
 中文 | [English](README.en.md)
