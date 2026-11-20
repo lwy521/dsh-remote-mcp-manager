@@ -10,7 +10,7 @@ DSH 插件:设置面板与手机原生界面上管理远程MCP 服务器
 <a href="https://github.com/ccch1mneyyy/dsh-go/stargazers"><img alt="GitHub Star 数" src="https://img.shields.io/github/stars/lwy521/dsh-remote-mcp-manager?style=flat-square&logo=github&label=Star&color=4B67B4&labelColor=2B3245"></a>
 
 <p align="center">
-<sub>有问题可以先看<a href="docs/guide/README.md">使用指南</a>遇到问题欢迎来</sub><br>
+<sub>有问题可以先看<a href="README.md">使用指南</a>遇到问题欢迎来</sub><br>
 <sub>
 <a href="https://qm.qq.com/q/n8IIExyQb6">QQ 群:1098700583</a></sub><br></p>
 
