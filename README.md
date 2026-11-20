@@ -1,6 +1,6 @@
 中文 | [English](README.en.md)
 
-# MCP管理器
+# dsh-remote-mcp-manager 
 
 DSH 插件:设置面板与手机原生界面上管理远程MCP 服务器
 
