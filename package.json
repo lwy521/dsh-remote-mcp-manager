@@ -1,11 +1,13 @@
 {
   "name": "dsh-remote-mcp-manager",
-  "version": "0.3.1",
-  "description": "DSH Web GUI 插件：在设置面板中管理远程/本地 MCP Server（HTTP / stdio），支持添加、编辑、删除、测试连接，工具自动注册到 DSH。",
+  "version": "0.4.0",
+  "icon": "icon.png",
+  "description": "DSH 多端 MCP 管理器：手机原生面板 + Web 设置页，配置写在 cordis.patch.yml，保存后由 HMR 自动应用。",
   "license": "MIT",
   "keywords": [
     "dsh",
     "dsh-plugin",
+    "dsh-go",
     "mcp",
     "mcp-server",
     "remote-mcp",
@@ -17,10 +19,14 @@
   "exports": {
     ".": "./lib/index.js",
     "./client": "./lib/client.js",
-    "./package.json": "./package.json"
+    "./locale/*.json": "./locale/*.json",
+    "./package.json": "./package.json",
+    "./icon.png": "./icon.png",
+    "./icon@2x.png": "./icon@2x.png"
   },
   "files": [
     "lib",
+    "locale",
     "README.md"
   ],
   "dsh": {
@@ -28,18 +34,50 @@
       "patch": "./cordis.patch.yml"
     },
     "client": {
-      "inject": [],
+      "inject": [
+        "@deepseek-ai/dsh-client-connection",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-settings",
+        "@deepseek-ai/dsh-client-ui-sidebar-right"
+      ],
       "platform": "web"
     }
   },
   "peerDependencies": {
     "@deepseek-ai/dsh-mcp-client": ">=0.1.0-rc.6"
   },
+  "engines": {
+    "dsh": ">=0.2.1-rc.2 <0.3.0-0"
+  },
+  "dshGo": {
+    "v": 1,
+    "icon": "plugin",
+    "title": {
+      "zh": "MCP 管理",
+      "en": "MCP Manager"
+    },
+    "contributes": {
+      "panels": [
+        {
+          "id": "mcp-manager",
+          "title": {
+            "zh": "MCP 管理",
+            "en": "MCP Manager"
+          },
+          "icon": "plugin",
+          "placement": [
+            "session.tab",
+            "features"
+          ]
+        }
+      ]
+    }
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/lwy521/dsh-remote-mcp-manager.git"
   },
   "dependencies": {
-    "js-yaml": "^5.3.0"
+    "js-yaml": "^5.5.0"
   }
 }

@@ -1,0 +1,4 @@
+# id: any unique id; name: must equal "name" in package.json.
+- insert:
+    - id: dsh-remote-mcp-manager
+      name: dsh-remote-mcp-manager

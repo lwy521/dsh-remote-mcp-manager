@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "MCP 管理",
+    "description": "管理远程与本地 MCP 服务器，配置写在 cordis.patch.yml，保存后自动生效。"
+  }
+}

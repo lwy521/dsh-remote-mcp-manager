@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "MCP Manager",
+    "description": "Manage remote and local MCP servers. Config is stored in cordis.patch.yml and applied automatically on save."
+  }
+}
