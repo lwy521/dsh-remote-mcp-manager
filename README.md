@@ -1,10 +1,8 @@
 # dsh-remote-mcp-manager
 
 DSH 插件：在设置面板与手机原生界面上管理远程 / 本地 MCP 服务器。
-<p align="center">
 ![下载量](https://img.shields.io/github/downloads/lwy521/dsh-remote-mcp-manager/total?logo=github)
-<a href="https://qm.qq.com/q/n8IIExyQb6"><img alt="QQ 群 1098700583" src＝"https://img2.baidu.com/it/u=2801345879,3378706863&fm=253&fmt=auto&app=138&f=JPEG?w=1113&h=500"></a>
-</p>
+<a align="center" href="https://qm.qq.com/q/n8IIExyQb6"><img alt="QQ 群 1098700583" src＝"https://img2.baidu.com/it/u=2801345879,3378706863&fm=253&fmt=auto&app=138&f=JPEG?w=1113&h=500"></a>
 
 中文 | [English](README.en.md)
 
