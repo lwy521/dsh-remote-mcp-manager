@@ -4,6 +4,10 @@ DSH 插件：在设置面板与手机原生界面上管理远程 / 本地 MCP �
 
 ![下载量](https://img.shields.io/github/downloads/lwy521/dsh-remote-mcp-manager/total?logo=github)
 
+![许可证](https://img.shields.io/badge/License-GPLv3-blue.svg)
+
+![版本号](https://img.shields.io/github/v/release/lwy521/dsh-remote-mcp-manager?logo=github)
+
 <p align="center"＞
 <sub>有问题可以先看<a href="docs/guide/README.md">使用指南</a>遇到问题欢迎来<a href="#community">QQ 群</a></sub><br>
 <sub>
@@ -108,9 +112,3 @@ dsh plugin add dsh-remote-mcp-manager
 - 自定义下拉组件替代原生 select
 - 超时时间配置
 - 会话 ID 透传支持（MCP-Session-Id）
-
-## 许可证
-![许可证](https://img.shields.io/badge/License-GPLv3-blue.svg)
-
-## 版本号
-![版本号](https://img.shields.io/github/v/release/lwy521/dsh-remote-mcp-manager?logo=github)
