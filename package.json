@@ -55,6 +55,7 @@
   },
   "dshGo": {
     "v": 1,
+    "minApp": "1.0.2",
     "icon": "plugin",
     "title": {
       "zh": "MCP 管理",

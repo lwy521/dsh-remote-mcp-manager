@@ -2,7 +2,7 @@
 
 # dsh-remote-mcp-manager 
 
-DSH 插件:设置面板与手机原生界面上管理远程MCP 服务器
+DSH 插件：在 **dsh-go 手机 App 的设置页** 与 DSH Web 设置面板里管理远程 MCP 服务器
 
 ![下载量](https://img.shields.io/github/downloads/lwy521/dsh-remote-mcp-manager/total?logo=github)
 ![许可证](https://img.shields.io/badge/License-GPLv3-blue.svg)
@@ -13,6 +13,13 @@ DSH 插件:设置面板与手机原生界面上管理远程MCP 服务器
 <sub>有问题可以先看<a href="README.md">使用指南</a>遇到问题欢迎来</sub><br>
 <sub>
 <a href="https://qm.qq.com/q/n8IIExyQb6">QQ 群:1098700583</a></sub><br></p>
+
+## 兼容 dsh-go 手机 App
+
+- 手机装 dsh-go（≥ 1.0.2），装上本插件后会在 **设置 → MCP管理** 出现一个原生页面
+- 页面由 App 按插件 schema 自动生成：每个服务是一个可展开的对象，点开就是名字/启用/自动测速/地址/协议/密钥/描述/超时 八项 + 「删除这个服务」
+- 最下面一行 **添加服务** 只有一个字段，填服务名就会自动追加一个完整槽位，填满继续增长
+- 不依赖原生面板（`contributes.panels` 已移除），所以不受 App 面板摆放位置限制
 
 ## 功能
 
