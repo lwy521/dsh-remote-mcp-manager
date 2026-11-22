@@ -1,8 +1,7 @@
 {
   "name": "dsh-remote-mcp-manager",
-  "version": "0.4.1",
-  "icon": "icon.png",
-  "description": "DSH 多端 MCP 管理器：手机原生面板 + Web 设置页，配置写在 cordis.patch.yml，保存后由 HMR 自动应用。",
+  "version": "0.5.0",
+  "description": "DSH 的 MCP 服务管理器：在 App 设置页直接增删改 MCP 服务，点开即完整表单，保存自动生效；附网页版管理页。",
   "license": "MIT",
   "keywords": [
     "dsh",
@@ -27,15 +26,11 @@
   "files": [
     "lib",
     "locale",
+    "README.md",
     "cordis.patch.yml",
     "icon.png",
-    "icon@2x.png",
-    "README.md"
+    "icon@2x.png"
   ],
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/",
-    "access": "public"
-  },
   "dsh": {
     "bundle": {
       "patch": "./cordis.patch.yml"
@@ -43,6 +38,8 @@
     "client": {
       "inject": [
         "@deepseek-ai/dsh-client-connection",
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-ui-slots",
         "@deepseek-ai/dsh-client-locale",
         "@deepseek-ai/dsh-client-ui-settings",
         "@deepseek-ai/dsh-client-ui-sidebar-right"
@@ -62,22 +59,6 @@
     "title": {
       "zh": "MCP 管理",
       "en": "MCP Manager"
-    },
-    "contributes": {
-      "panels": [
-        {
-          "id": "mcp-manager",
-          "title": {
-            "zh": "MCP 管理",
-            "en": "MCP Manager"
-          },
-          "icon": "plugin",
-          "placement": [
-            "session.tab",
-            "features"
-          ]
-        }
-      ]
     }
   },
   "repository": {
