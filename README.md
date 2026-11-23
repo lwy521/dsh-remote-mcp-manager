@@ -7,7 +7,6 @@ DSH 插件：在 **dsh-go 手机 App 的设置页** 与 DSH Web 设置面板里�
 ![下载量](https://img.shields.io/github/downloads/lwy521/dsh-remote-mcp-manager/total?logo=github)
 ![许可证](https://img.shields.io/badge/License-GPLv3-blue.svg)
 ![版本号](https://img.shields.io/github/v/release/lwy521/dsh-remote-mcp-manager?logo=github)
-
 <a href="https://github.com/ccch1mneyyy/dsh-go/stargazers"><img alt="GitHub Star 数" src="https://img.shields.io/github/stars/lwy521/dsh-remote-mcp-manager?style=flat-square&logo=github&label=Star&color=4B67B4&labelColor=2B3245"></a>
 
 <p align="center">
