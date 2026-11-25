@@ -1,6 +1,6 @@
 {
   "name": "dsh-remote-mcp-manager",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "icon": "icon.png",
   "description": "DSH 的 MCP 服务管理器：在 App 设置页直接增删改 MCP 服务，点开即完整表单，保存自动生效；附网页版管理页。",
   "license": "MIT",
@@ -39,8 +39,6 @@
     "client": {
       "inject": [
         "@deepseek-ai/dsh-client-connection",
-        "@deepseek-ai/dsh-client-runtime",
-        "@deepseek-ai/dsh-client-ui-slots",
         "@deepseek-ai/dsh-client-locale",
         "@deepseek-ai/dsh-client-ui-settings",
         "@deepseek-ai/dsh-client-ui-sidebar-right"
@@ -52,7 +50,7 @@
     "@deepseek-ai/dsh-mcp-client": ">=0.1.0-rc.6"
   },
   "engines": {
-    "dsh": ">=0.2.1-rc.2 <0.3.0-0"
+    "dsh": ">=0.2.1-rc.2 <0.3.0-0 || >=0.2.3-alpha.0 <0.3.0-0"
   },
   "dshGo": {
     "v": 1,

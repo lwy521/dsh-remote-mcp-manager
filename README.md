@@ -14,6 +14,30 @@ DSH 插件：在 **dsh-go 手机 App 的设置页** 与 DSH Web 设置面板里�
 <sub>
 <a href="https://qm.qq.com/q/n8IIExyQb6">QQ 群:1098700583</a></sub><br></p>
 
+## 兼容 DSH 宿主版本（重要）
+
+本插件的 `engines.dsh` 是：
+
+```json
+">=0.2.1-rc.2 <0.3.0-0 || >=0.2.3-alpha.0 <0.3.0-0"
+```
+
+为什么写这么长：npm 的 `semver` 有一条容易踩的规则 —— **只要范围里出现 prerelease，就只有 `major.minor.patch` 三段完全相同的 prerelease 才参与比较**。
+
+| 写法 | `0.2.3-alpha.2` 是否满足 | 说明 |
+| --- | --- | --- |
+| `>=0.2.1-rc.2 <0.3.0-0` | **否** | 只认 `0.2.1-*` 的预发布 |
+| `>=0.2.1-rc.2` | **否** | 去掉上界也没用，规则不变 |
+| `>=0.2.1-rc.2 <0.4.0-0` | **否** | 上界放宽同样不解决 |
+| `>=0.2.1-rc.2 <0.3.0-0 || >=0.2.3-alpha.0 <0.3.0-0` | **是** | 显式补一段同三段预发布区间 |
+
+DSH 启动时会对每个 bundle 做这项校验，不满足就**跳过加载**（`skippedBundles` 里能看到原因），外观表现是「装上了但功能不出现」。以后适配新的 alpha / rc 宿主时，把对应三段补进 `||` 后面即可。
+
+### 0.5.1 修正
+
+- `engines.dsh` 增加 `|| >=0.2.3-alpha.0 <0.3.0-0`，可在 0.2.3-alpha.x 宿主上正常加载
+- `dsh.client.inject` 移除 `@deepseek-ai/dsh-client-runtime` 与 `@deepseek-ai/dsh-client-ui-slots`（新宿主已不含这两个包；`client-modules` 对缺失的 inject 会静默忽略，但留着会误导）
+
 ## 兼容 dsh-go 手机 App
 
 - 手机装 dsh-go（≥ 1.0.2），装上本插件后会在 **设置 → MCP管理** 出现一个原生页面
