@@ -35,6 +35,8 @@ DSH 启动时会对每个 bundle 做这项校验，不满足就**跳过加载**�
 
 ### 0.5.1 修正
 
+- `package.json` 补回顶层 `icon` 字段 —— **npm 上的 0.5.0 发布于该修复之前**，装 0.5.0 的宿主不会显示插件图标
+
 - `engines.dsh` 增加 `|| >=0.2.3-alpha.0 <0.3.0-0`，可在 0.2.3-alpha.x 宿主上正常加载
 - `dsh.client.inject` 移除 `@deepseek-ai/dsh-client-runtime` 与 `@deepseek-ai/dsh-client-ui-slots`（新宿主已不含这两个包；`client-modules` 对缺失的 inject 会静默忽略，但留着会误导）
 
