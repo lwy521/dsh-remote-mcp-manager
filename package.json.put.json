@@ -1,0 +1,70 @@
+{
+  "name": "dsh-remote-mcp-manager",
+  "version": "0.5.3",
+  "icon": "icon.png",
+  "description": "DSH 的 MCP 服务管理器：在 App 设置页直接增删改 MCP 服务，点开即完整表单，保存自动生效；附网页版管理页。",
+  "license": "MIT",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "dsh-go",
+    "mcp",
+    "mcp-server",
+    "remote-mcp",
+    "stdio",
+    "streamable-http"
+  ],
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./package.json": "./package.json",
+    "./icon.png": "./icon.png",
+    "./icon@2x.png": "./icon@2x.png"
+  },
+  "files": [
+    "lib",
+    "locale",
+    "README.md",
+    "cordis.patch.yml",
+    "icon.png",
+    "icon@2x.png"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-connection",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-settings",
+        "@deepseek-ai/dsh-client-ui-sidebar-right"
+      ],
+      "platform": "web"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-mcp-client": ">=0.1.0-rc.6"
+  },
+  "engines": {
+    "dsh": ">=0.2.1-rc.2 <0.3.0-0 || >=0.2.3-alpha.0 <0.3.0-0"
+  },
+  "dshGo": {
+    "v": 1,
+    "icon": "plugin",
+    "title": {
+      "zh": "MCP 管理",
+      "en": "MCP Manager"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lwy521/dsh-remote-mcp-manager.git"
+  },
+  "dependencies": {
+    "js-yaml": "^5.5.0"
+  }
+}
