@@ -1,6 +1,6 @@
 {
   "name": "dsh-remote-mcp-manager",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "icon": "icon.png",
   "description": "DSH 的 MCP 服务管理器：在 App 设置页直接增删改 MCP 服务，点开即完整表单，保存自动生效；附网页版管理页。",
   "license": "MIT",
